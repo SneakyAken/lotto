@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>totolotek</title>
+    <style>
+        .js {
+            height: 100%;
+            width: 100%;
+            margin-top: 350px;
+            font-size: 30px;
+            font-family: monospace;
+            color: #4682B4;
+            text-align: center;
+            border: chartreuse 10px;
+
+        }
+
+        body {
+            background-image: url('lotto.jpg');
+            background-size: 110%;
+            color: #4682B4;
+            
+            
+
+        }
+
+        .kwadrat{
+            height: 600px;
+            width: 600px;
+            color: green;
+            
+            border-width: 2px;
+            text-align: center;
+            background-color: #FFFFFF;
+            opacity: 100%;
+            border-radius: 20px;
+            border-width: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+
+            
+
+
+
+
+
+
+
+
+        }
+        .kwadratcontainer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            opacity: 50%;
+
+        }
+        .txt{
+            font-family: monospace;
+            font-size: 26px;
+            color: black;
+            font-weight: bold;
+            
+
+
+
+
+
+        }
+        .komunikaty{
+
+        }
+    </style>
+</head>
+
+<body>
+    
+<div class="kwadratcontainer">
+<div class="kwadrat">
+    <div class="txt">
+    
+
+        <script>
+            let win = 0;
+            const us1 = Number(prompt("podaj pierwszą liczbę: "));
+            const us2 = Number(prompt("podaj drugą liczbę: "));
+            const us3 = Number(prompt("podaj trzecią liczbę: "));
+            const us4 = Number(prompt("podaj czwartą liczbę: "));
+            const us5 = Number(prompt("podaj piątą liczbę: "));
+            const us6 = Number(prompt("podaj sześć liczbę: "));
+
+
+
+            const los1 = Math.round(Math.random() * 49) + 1;
+            const los2 = Math.round(Math.random() * 49) + 1;
+            const los3 = Math.round(Math.random() * 49) + 1;
+            const los4 = Math.round(Math.random() * 49) + 1;
+            const los5 = Math.round(Math.random() * 49) + 1;
+            const los6 = Math.round(Math.random() * 49) + 1;
+
+
+            document.write("Twoje zaznaczone liczby: <br><br>" + us1 + " " + us2 + " " + us3 + " " + us4 + " " +
+                us5 +
+                " " +
+                us6 + " ");
+            document.write("<br><br> Losowe liczby, które chciałbyś mieć: <br><br>" + los1 + " " + los2 + " " + los3 +
+                " " +
+                los4 +
+                " " +
+                los5 + " " + los6 + " ");
+
+
+
+            document.write(" <br><br> Twoje szczęśliwe liczby: <br><br>")
+            if (us1 == los1 || us1 == los2 || us1 == los3 || us1 == los4 || us1 == los5 || us1 == los6) {
+                document.write(+us1 + " ");
+                win++;
+            }
+            if (us2 == los1 || us2 == los2 || us2 == los3 || us2 == los4 || us2 == los5 || us2 == los6) {
+                document.write(+us2 + " ");
+                win++;
+            }
+            if (us3 == los1 || us3 == los2 || us3 == los3 || us3 == los4 || us3 == los5 || us3 == los6) {
+                document.write(+us3 + " ");
+                win++;
+            }
+            if (us4 == los1 || us4 == los2 || us4 == los3 || us4 == los4 || us4 == los5 || us4 == los6) {
+                document.write(+us4 + " ");
+                win++;
+            }
+            if (us5 == los1 || us5 == los2 || us5 == los3 || us5 == los4 || us5 == los5 || us5 == los6) {
+                document.write(+us5 + " ");
+                win++;
+            }
+            if (us6 == los1 || us6 == los2 || us6 == los3 || us6 == los4 || us6 == los5 || us6 == los6) {
+                document.write(us6);
+                win++;
+            }
+
+            document.write("<br><br> Twoja wygrana to: ")
+            if (win == 0) {
+                document.write("<br><br>nic nie wygrałeś");
+            }
+            if (win == 1) {
+                document.write("<br><br>wygrałeś 5zł");
+            }
+            if (win == 2) {
+                document.write("<br><br>wygrałeś 20zł");
+            }
+            if (win == 3) {
+                document.write("<br><br>wygrałeś 100zł");
+            }
+            if (win == 4) {
+                document.write("<br<br>wygrałeś 1000zł");
+            }
+            if (win == 5) {
+                document.write("<br><br>wygrałeś 10000zł");
+            }
+            if (win == 6) {
+                document.write("<br><br>wygrałeś główną wygraną 100000zł");
+            }
+        </script>
+    </div>
+</div>
+</div>
+
+
+</body>
+
+</html>
